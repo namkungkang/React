@@ -1,15 +1,15 @@
 import './App.css';
-import Counter from './components/Counter';
-import Modal from './components/Modal';
-import './components/Modal.css';
+import Box from './components/Box';
 
 
 function App() {
   return (
     <div className="App">
-       <h1>안녕하세요!</h1>
-            <p>내용내용내용</p>
-      <Modal/>
+        <Box name="1" num="일"/>
+        <Box name="2" num="이"/>
+        <Box name="3" num="삼"/>
+        <Box name="4" num="사"/>
+        
     </div>
   );
 }
