@@ -1,0 +1,46 @@
+.modal-overlay {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0%
+     
+} 
+ 
+/*모달창 클릭했을 때 오버레이 써서 배경색 설정하기
+1. 모달창
+2. 스피너
+3. 이미지 확대
+4. 알림 또는 팝업
+5. 비디오 플레이어
+<div class="modal-overlay">
+    <div class="modal-box"
+        (모달내용)
+        </div>
+    </div>    
+*/
+
+.modal-box {
+    border: 2px solid  ;
+    border-radius: 4px;
+    width: 20%;
+    margin:400px 700px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#content {
+    margin-left: 20px;
+    
+}   
+
+.close {
+    margin-left: 260px;
+    margin-top: 20px;
+}
