@@ -1,16 +1,19 @@
 import './App.css';
-import Box from './components/Box';
-
+import Movie from './components/Movie';
+import { movies } from './movieDummy';
 
 function App() {
   return (
-    <div className="App">
-        <Box name="1" num="일"/>
-        <Box name="2" num="이"/>
-        <Box name="3" num="삼"/>
-        <Box name="4" num="사"/>
+    <>
+      {movies.results.map((item) => (
+        <Movie
         
-    </div>
+          poster_path={item.poster_path}
+          title={item.title}
+          vote_average={item.vote_average}
+        />
+      ))}
+    </>
   );
 }
 
