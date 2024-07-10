@@ -11,6 +11,7 @@ function App() {
           poster_path={item.poster_path}
           title={item.title}
           vote_average={item.vote_average}
+          
         />
       ))}
     </>
