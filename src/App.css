@@ -30,3 +30,11 @@
 .details {
     margin-top: -25px;    
 }
+
+.main-bg {
+    height: 400px;
+    background-image: url('./img/bg.png');
+    background-size: cover;
+    background-position: center;
+}
+

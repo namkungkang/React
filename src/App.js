@@ -1,39 +1,38 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-
+import { useEffect, useState } from "react";
+import "./App.css";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import List from "./components/List";
+import { Routes, Route, Link } from "react-router-dom";
 function App() {
-  const [count,setCount] = useState(1);
-  const [name,setName] = useState('');
+  return (
+    <div className="App">
+      <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Shoe shop</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Cart</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              {" "}
+              <div className="main-bg"></div>
+              <List />
+            </div>
+          }
+        />
+        <Route path="/detail" element={<div>상세페이지임</div>} />
+        <Route path="about" element={<div>어바웃페이지임</div>} />
+      </Routes>
 
-  const increase = () => {
-    setCount(count+1);
-  }
-
-  const handleChange = (e) => {
-    setName(e.target.value);
-  }
-
-  useEffect(()=> {
-    console.log("name 변화");
-  },[name])
-
-  //useEffect는 () 콜백함수로 받음 예시 (()=>{})
-  //useEffect는 마운팅 될 때만 랜더링하고싶다면 빈 배열
-  //name이 변화 될때만 랜더링하고 싶으면 배열안에 초기값
-  
-  return(
-    <div className='App'>
-        <button onClick={increase}>Update</button>
-        <span>count : {count}</span>
-        <input type='text' value={name} onChange={handleChange}></input>
-        <span>name: {name}</span>
-
-      
     </div>
-
-
-
-  )
-
+  );
 }
- export default App;
+export default App;
